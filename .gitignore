@@ -5,3 +5,5 @@
 *\#*
 .clangd
 .ipynb*
+**/.idea/
+.vscode/
