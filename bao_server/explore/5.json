@@ -1,0 +1,41 @@
+[
+  {
+    "type": "reward"
+  },
+  {
+    "Plan": {
+      "Node Type": "Index Scan",
+      "Node Type ID": "21",
+      "Relation Name": "title",
+      "Total Cost": 8.4475,
+      "Plan Rows": 1.0
+    }
+  },
+  {
+    "cast_info": 416,
+    "movie_info": 265,
+    "title": 3026,
+    "person_info": 2220,
+    "movie_companies": 262,
+    "movie_info_idx": 195,
+    "title_pkey": 1,
+    "kind_id_title": 1,
+    "company_name": 1942,
+    "aka_title": 193,
+    "movie_keyword": 200,
+    "company_type": 1,
+    "complete_cast": 733,
+    "info_type": 1,
+    "keyword": 951,
+    "char_name": 66,
+    "movie_link": 165,
+    "name": 132,
+    "kind_type": 1,
+    "link_type": 1,
+    "aka_name": 128
+  },
+  {
+    "reward": 0.793708,
+    "pid": 66796
+  }
+]

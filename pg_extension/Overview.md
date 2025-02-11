@@ -74,3 +74,30 @@ This PostgreSQL extension integrates with the PostgreSQL query planner and execu
 ### Summary
 
 The extension integrates with PostgreSQL's query processing pipeline to optimize query plans using the Bao server. It hooks into the planner, executor start, executor end, and EXPLAIN phases to interact with the Bao server, collect execution statistics, and provide optimization hints. The extension is controlled by several configuration variables that enable or disable different aspects of Bao's functionality.
+
+---
+
+## Data Movement:
+
+### Query: 
+
+- The extension sends following things to the server:
+   - Plans for each of the 5 arms.
+      - Plan costs and CardEsts are added by the standard planner of PG under the specific tuning of a given arm.
+   - Buffer state:
+   ```c
+   // modified from pg_buffercache_pages
+   static char* buffer_state() {
+   // Generate a JSON string mapping each relation name to the number of buffered
+   // blocks that relation has in the PG buffer cache.
+   }
+   ```
+
+   - Refer [bao_bufferstate.h](./bao_bufferstate.h).
+
+- The server returns:
+   -  Index of the chosen plan.
+
+## Reward:
+   - Executed Plan
+   - Reward
